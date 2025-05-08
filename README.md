@@ -2,6 +2,8 @@
 
 Application Angular moderne pour l'affichage, le tri et le filtrage de produits.
 
+![Aperçu de l'application ProductList](./demo/Screenshot%202025-05-08%20223450.jpg)
+
 ## Technologies
 
 - Angular 19 (composants autonomes)
