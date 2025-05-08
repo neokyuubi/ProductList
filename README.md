@@ -4,6 +4,10 @@ Application Angular moderne pour l'affichage, le tri et le filtrage de produits.
 
 ![Aperçu de l'application ProductList](./demo/Screenshot%202025-05-08%20223450.jpg)
 
+## Démo en ligne
+
+L'application est disponible en ligne: [https://product-list-neokyuubis-projects.vercel.app/](https://product-list-neokyuubis-projects.vercel.app/)
+
 ## Technologies
 
 - Angular 19 (composants autonomes)
