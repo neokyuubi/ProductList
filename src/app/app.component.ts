@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { inject } from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 })
 export class AppComponent {
   title = 'ProductList';
+
+  constructor() {
+    inject();
+  }
 }
