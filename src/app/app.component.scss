@@ -1,0 +1,26 @@
+header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header .lead {
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom class to make header fixed on mobile for better UX */
+@media (max-width: 767.98px) {
+  header.fixed-header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+
+  main {
+    padding-top: 0.5rem;
+  }
+}

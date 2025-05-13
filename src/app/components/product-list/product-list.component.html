@@ -1,6 +1,6 @@
 <div class="container product-list-container">
   <div class="row mb-4">
-    <div class="col-md-6">
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
       <div class="input-group">
         <input
           type="text"
@@ -13,7 +13,7 @@
         </button>
       </div>
     </div>
-    <div class="col-md-6 text-end">
+    <div class="col-12 col-md-6 d-flex justify-content-between justify-content-md-end align-items-center">
       <span class="badge bg-info text-white py-2 px-3 me-2">
         {{ displayedProducts.length }} / {{ productCount }} products
       </span>
@@ -28,11 +28,11 @@
 
   <app-loading-spinner *ngIf="productService.loading$ | async"></app-loading-spinner>
 
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
     <div class="col" *ngFor="let product of displayedProducts">
       <div class="card h-100 product-card">
         <div class="card-img-container">
-          <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title">
+          <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title" loading="lazy">
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ product.title }}</h5>

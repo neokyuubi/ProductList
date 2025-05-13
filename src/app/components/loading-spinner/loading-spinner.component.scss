@@ -118,3 +118,44 @@
     color: #0dcaf0;
   }
 }
+
+/* Mobile responsive styles */
+@media (max-width: 576px) {
+  .ripple-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .ripple1 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ripple2 {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ripple3 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .loading-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 15px;
+  }
+
+  @keyframes text-wave {
+    0%, 100% {
+      transform: translateY(0);
+      color: #0d6efd;
+    }
+    50% {
+      transform: translateY(-7px);
+      color: #0dcaf0;
+    }
+  }
+}

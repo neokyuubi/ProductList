@@ -18,6 +18,7 @@ body {
   background-color: var(--light-color);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .hover-shadow {
@@ -26,4 +27,40 @@ body {
 
 .hover-shadow:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsive styles */
+.small-text-mobile {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-list-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .small-text-mobile {
+    font-size: 0.875rem;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) {
+  .btn, .card {
+    transition: transform 0.2s;
+  }
+
+  .btn:active, .card:active {
+    transform: scale(0.98);
+  }
 }
