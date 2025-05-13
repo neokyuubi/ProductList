@@ -162,7 +162,7 @@
   }
 
   .product-card {
-    margin-bottom: 0;
+    margin-bottom: 8px;
   }
 
   .product-card .card-img-container {
@@ -179,6 +179,19 @@
 
   .input-group {
     width: 100%;
+  }
+
+  .card-body {
+    padding: 0.9rem !important;
+  }
+
+  .card-category {
+    margin-top: 6px;
+    margin-bottom: 8px !important;
+  }
+
+  .price-container {
+    margin-top: 10px !important;
   }
 }
 

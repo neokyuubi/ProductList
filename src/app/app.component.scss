@@ -5,10 +5,18 @@ header {
 @media (max-width: 576px) {
   header h1 {
     font-size: 1.5rem;
+    padding-top: 5px;
   }
 
   header .lead {
     font-size: 0.9rem;
+    margin-bottom: 8px !important;
+    padding-bottom: 5px;
+  }
+
+  header .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -22,5 +30,7 @@ header {
 
   main {
     padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }

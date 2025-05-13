@@ -1,7 +1,7 @@
 <div class="container product-list-container">
   <div class="row mb-4">
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="input-group">
+      <div class="input-group mb-2 mb-md-0">
         <input
           type="text"
           class="form-control"
@@ -28,19 +28,19 @@
 
   <app-loading-spinner *ngIf="productService.loading$ | async"></app-loading-spinner>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-    <div class="col" *ngFor="let product of displayedProducts">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-3 g-lg-4">
+    <div class="col mb-3 mb-md-0" *ngFor="let product of displayedProducts">
       <div class="card h-100 product-card">
         <div class="card-img-container">
           <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title" loading="lazy">
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ product.title }}</h5>
-          <div class="card-category">
+          <div class="card-category mt-2">
             <span class="badge bg-light text-dark me-1">{{ product.category }}</span>
             <span class="badge bg-secondary" *ngIf="product.brand && product.brand.trim() !== ''">{{ product.brand }}</span>
           </div>
-          <div class="rating mb-2">
+          <div class="rating mb-2 mt-2">
             <span *ngFor="let star of getStarsArray(product.rating)" class="star">
               <i *ngIf="star === 2" class="fas fa-star"></i>
               <i *ngIf="star === 1" class="fas fa-star-half-alt"></i>
@@ -48,13 +48,13 @@
             </span>
             <small class="text-muted ms-1">({{ product.rating }})</small>
           </div>
-          <div class="price-container d-flex justify-content-between align-items-center">
+          <div class="price-container d-flex justify-content-between align-items-center mt-3">
             <span class="price">${{ product.price.toFixed(2) }}</span>
             <span *ngIf="product.discountPercentage" class="discount badge bg-danger">
               -{{ product.discountPercentage }}%
             </span>
           </div>
-          <div *ngIf="product.stock" class="stock small mt-1">
+          <div *ngIf="product.stock" class="stock small mt-2">
             Stock: {{ product.stock }}
           </div>
         </div>
